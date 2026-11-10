@@ -1,0 +1,444 @@
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.free-label {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =========================================================
+   APRESENTAÇÃO
+========================================================= */
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.hero p {
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   ÁREA DE UPLOAD
+========================================================= */
+
+.upload-section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #c7d2fe;
+    border-radius: 12px;
+    padding: 45px 20px;
+    background: #fafaff;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.upload-area:hover,
+.upload-area.dragging {
+    background: #eef2ff;
+    border-color: #4f46e5;
+}
+
+.upload-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 15px;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.upload-area h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.upload-area p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.formats {
+    color: #9ca3af;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   INFORMAÇÕES DO ARQUIVO
+========================================================= */
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 15px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.file-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 9px;
+    font-size: 23px;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.file-details strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.file-details span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.remove-button {
+    border: none;
+    background: transparent;
+    color: #ef4444;
+    font-size: 18px;
+    padding: 8px;
+}
+
+/* =========================================================
+   INFORMAÇÕES DO MODELO
+========================================================= */
+
+.model-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.status-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: #eab308;
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.primary-button,
+.secondary-button {
+    border: none;
+    border-radius: 9px;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.primary-button {
+    background: #4f46e5;
+    color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: #4338ca;
+}
+
+.primary-button:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.upload-section > .primary-button {
+    width: 100%;
+}
+
+.secondary-button {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.secondary-button:hover {
+    background: #e0e7ff;
+}
+
+/* =========================================================
+   BARRA DE PROGRESSO
+========================================================= */
+
+.progress-section {
+    margin-top: 25px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.progress-track {
+    height: 9px;
+    width: 100%;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+/* =========================================================
+   MENSAGEM DE STATUS
+========================================================= */
+
+.status-message {
+    margin-top: 17px;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.status-message.error {
+    color: #dc2626;
+}
+
+.status-message.success {
+    color: #15803d;
+}
+
+/* =========================================================
+   RESULTADO DA TRANSCRIÇÃO
+========================================================= */
+
+.result-section {
+    background: white;
+    margin-top: 25px;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.result-header h2 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.result-header p {
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.success-label {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#transcriptionText {
+    width: 100%;
+    min-height: 280px;
+    resize: vertical;
+    padding: 17px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #374151;
+}
+
+#transcriptionText:focus {
+    border-color: #818cf8;
+}
+
+.result-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 17px;
+}
+
+.result-actions button {
+    flex: 1;
+}
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #9ca3af;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 14px;
+    }
+
+    .header {
+        margin-bottom: 45px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .upload-section,
+    .result-section {
+        padding: 20px;
+    }
+
+    .upload-area {
+        padding: 35px 15px;
+    }
+
+    .result-header {
+        align-items: flex-start;
+    }
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Transforme áudios em texto gratuitamente com inteligência artificial.">
+    <title>Transcritor de Áudio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">♫</span>
+                <span>Transcritor</span>
+            </div>
+
+            <span class="free-label">100% Gratuito</span>
+        </header>
+
+        <section class="hero">
+            <h1>Transforme áudio em texto</h1>
+            <p>
+                Envie seu áudio e deixe a inteligência artificial
+                fazer a transcrição para você.
+            </p>
+        </section>
+
+        <section class="upload-section">
+
+            <label for="audioFile" class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">↑</div>
+
+                <h2>Selecione seu áudio</h2>
+
+                <p>
+                    Clique aqui ou arraste seu arquivo
+                </p>
+
+                <span class="formats">
+                    MP3, WAV, M4A, OGG e outros formatos suportados pelo navegador
+                </span>
+
+            </label>
+
+            <input
+                type="file"
+                id="audioFile"
+                accept="audio/*,.mp3,.wav,.m4a,.ogg"
+                hidden
+            >
+
+            <div class="file-info" id="fileInfo" hidden>
+                <div class="file-icon">♫</div>
+
+                <div class="file-details">
+                    <strong id="fileName">Arquivo selecionado</strong>
+                    <span id="fileSize"></span>
+                </div>
+
+                <button id="removeFile" class="remove-button" type="button">
+                    ✕
+                </button>
+            </div>
+
+            <div class="model-info" id="modelInfo">
+                <span class="status-dot"></span>
+                O modelo de inteligência artificial será carregado na primeira utilização.
+            </div>
+
+            <button id="transcribeButton" class="primary-button" disabled>
+                Transcrever áudio
+            </button>
+
+            <div class="progress-section" id="progressSection" hidden>
+
+                <div class="progress-header">
+                    <span id="progressText">Preparando...</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+            </div>
+
+            <div class="status-message" id="statusMessage" role="status">
+                Selecione um áudio para começar.
+            </div>
+
+        </section>
+
+        <section class="result-section" id="resultSection" hidden>
+
+            <div class="result-header">
+                <div>
+                    <h2>Texto transcrito</h2>
+                    <p>Confira o conteúdo reconhecido pela inteligência artificial.</p>
+                </div>
+
+                <span class="success-label">Concluído</span>
+            </div>
+
+            <textarea
+                id="transcriptionText"
+                placeholder="O texto transcrito aparecerá aqui..."
+                spellcheck="true"
+            ></textarea>
+
+            <div class="result-actions">
+
+                <button id="copyButton" class="secondary-button">
+                    Copiar texto
+                </button>
+
+                <button id="downloadButton" class="primary-button">
+                    Baixar TXT
+                </button>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>
+                Transcrição processada diretamente no seu navegador.
+            </p>
+            <p>
+                Seus áudios não são enviados para um servidor de transcrição.
+            </p>
+        </footer>
+
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
