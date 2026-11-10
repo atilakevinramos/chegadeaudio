@@ -1,6 +1,0 @@
-dist/
-build/
-__pycache__/
-*.spec
-clientes.txt
-.env
