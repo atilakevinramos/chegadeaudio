@@ -12,7 +12,7 @@ import { pipeline, env } from
 // CONFIGURAÇÕES
 // =========================================================
 
-const MODEL_NAME = "Xenova/whisper-base";
+const MODEL_NAME = "Xenova/whisper-small";
 
 env.allowLocalModels = false;
 env.allowRemoteModels = true;
