@@ -12,7 +12,7 @@ import { pipeline, env } from
 // CONFIGURAÇÕES
 // =========================================================
 
-const MODEL_NAME = "Xenova/whisper-tiny";
+const MODEL_NAME = "Xenova/whisper-base";
 
 env.allowLocalModels = false;
 env.allowRemoteModels = true;
@@ -580,4 +580,3 @@ uploadArea.addEventListener("drop", (event) => {
 // =========================================================
 
 showStatus("Selecione um áudio para começar.");
-
